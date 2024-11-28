@@ -48,11 +48,5 @@ double pi = 0;//라이프니츠 원주율 공식에서 n항까지의 누적 결�
 double report_pi[15] = { 0 };//선두의 10개,끝의 5개의 파이 값을 기록하는 테이블
 calculate_pi(&pi, &minus, report_pi);
 print_pi(report_pi);
-
-
-
-
-
-
 return 0 ;
 }
