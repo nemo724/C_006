@@ -17,14 +17,14 @@ for (int i = 1; i <= 10000; i += 2)
 	{if (*minus == false)
 		{*pi += 1.0 / i;
 		*minus = true;//현재 항이 -가 아니면 다음 항은 -	
-		if (i < 10 || i>10000 - 5)
+		if (i < 11 || i>10000 - 5)
 		{storage_pi(&table_index,*pi,report_pi); }
 		}
 
 		else if (*minus == true)
 		{*pi += 1.0 / i;
 		*minus = false;//현재 항이 -라면면 다음 항은 +	
-		if (i < 10 || i>10000 - 5)
+		if (i < 11 || i>10000 - 5)
 		{storage_pi(&table_index,*pi,report_pi); }
 		}
 	}
