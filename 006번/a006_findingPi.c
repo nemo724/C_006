@@ -4,7 +4,8 @@
 
 
 int main(void)
-{bool minus = false; 
+{bool minus = false;
+double pi = 0;
 
 
 
