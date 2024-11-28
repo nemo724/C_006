@@ -6,7 +6,7 @@ void calculate_pi(double*, bool*,double*);//라이프니츠 원주율 공식의 
 void print_pi(double*);//원주율의 값을 기록한 테이블을 출력하는 함수
 
 void storage_pi(int *index,double pi ,double*report_pi)
-{report_pi[*index]=4*pi;
+{report_pi[*index]=4 * pi;
 *index += 1;}
 
 
@@ -17,14 +17,14 @@ for (int i = 1; i <= 10000; i += 2)
 	{if (*minus == false)
 		{*pi += 1.0 / i;
 		*minus = true;//현재 항이 -가 아니면 다음 항은 -	
-		if (i < 11 || i>10000 - 5)
+		if (i < 20 || i>10000 - 10)//i가 2씩 증가하기에 상위 10개는 2*10로 20미만의 홀수 10개 되어야 하고 하위 5개는 2*5=10 10000-10dls 9991,3,5,7,9 이렇게 5개가 담김
 		{storage_pi(&table_index,*pi,report_pi); }
 		}
 
 		else if (*minus == true)
-		{*pi += 1.0 / i;
+		{*pi -= 1.0 / i;
 		*minus = false;//현재 항이 -라면면 다음 항은 +	
-		if (i < 11 || i>10000 - 5)
+		if (i < 20 || i>10000 - 10)//위와 동일
 		{storage_pi(&table_index,*pi,report_pi); }
 		}
 	}
@@ -33,7 +33,7 @@ for (int i = 1; i <= 10000; i += 2)
 
 void print_pi(double* report_pi)
 {for(int i=0;i<15;i++)
-	{printf("%5d번째 항까지의 누적합으로 구한 pi = %.18f\n",i+1,report_pi[i]);}
+	{printf("pi = %.18f\n",report_pi[i]);}
 }
 
 
