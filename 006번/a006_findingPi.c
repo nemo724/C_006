@@ -1,7 +1,12 @@
 ﻿#include <stdio.h>
 #include <stdbool.h>
 
+void storage_pi(int*,double , double*);//라이프니츠 원주율 공식에서 ()안에 누적된 값을 매개변수로 받고 *4로 파이를 구해 테이블에 기록하는 함수 
 
+
+void storage_pi(int *index,double pi ,double*report_pi)
+{report_pi[*index]=4*pi;
+*index += 1;}
 
 
 
