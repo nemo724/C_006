@@ -34,7 +34,7 @@ for (int i = 1; i <= 10000; i += 2)
 void print_pi(double* report_pi)
 {for(int i=0;i<15;i++)
 	{if(i==0){printf("1번 항부터 10번항 까지의 각 누적결과에 따른 원주율들\n"); }
-	else if(i==10) { printf("마지막 항으로부터 5개의 각 누적결과에 따른 원주율들\n"); }
+	else if(i==10) { printf("마지막 항의 앞에 4개와 마지막 항의 각 누적결과에 따른 원주율들\n"); }
 	printf("pi = %.18f\n",report_pi[i]);}
 }
 
